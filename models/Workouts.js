@@ -13,7 +13,11 @@ let workoutSchema = new mongoose.Schema({
                 trim: true,
                 required: "Must select an exercise type",
             },
-            name: String,
+            name: {
+                type: String,
+                trim: true,
+                required: "Must enter an exercise name",
+            },
             duration: Number,
             weight: Number,
             reps: Number,

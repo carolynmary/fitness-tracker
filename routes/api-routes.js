@@ -3,9 +3,9 @@ const WorkoutModel = require("../models/Workouts.js");
 
 // CREATE NEW WORKOUT
 router.post("/api/workouts", ({ body }, res) => {
-  // const workout = new WorkoutModel({ body })
-  // workout.save()
-  //   // WorkoutModel.create(body)
+  // // const workout = new WorkoutModel({ body })
+  // // workout.save()
+  //   WorkoutModel.create({body})
   //   .then(data => {
   //     res.json(data);
   //   })
@@ -53,9 +53,19 @@ router.get("/api/workouts/:id", (req, res) => {
   //   });
 });
 
-
 router.get("/api/workouts/:id/range", (req, res) => {
-
+  // console.log(req.params);
+  // const workoutId = req.params.id;
+  // WorkoutModel.find({
+  //   _id: workoutId,
+  // })
+  //   //   .sort({ date: -1 })
+  //   .then(data => {
+  //     res.json(data);
+  //   })
+  //   .catch(err => {
+  //     res.status(400).json(err);
+  //   });
 });
 
 // DELETE WORKOUT
