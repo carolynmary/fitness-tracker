@@ -14,21 +14,17 @@
 
   <nav>
     <a href="/">Fitness Tracker</a>
+    <a href="/stats" style="margin-left: 15px;">STATS</a>
   </nav>
 
   <div class="wrapper workout">
 
     <header>
-      <h1>Fitness Tracker</h1>
+      <h1>FITNESS TRACKER</h1>
     </header>
 
     <div class="ui container workout">
       <div class="ui raised card m-auto">
-
-        <!-- NEW -->
-        <div class="buttons">
-          <a href="/exercise" class="huge positive ui button">Create a New Workout</a>
-        </div>
 
         <!-- LAST -->
         <div class="prev-workout">
@@ -36,20 +32,14 @@
           <div>
             <div class="workout-stats"></div>
             <div class="buttons">
-              <a id="continue-btn" href="/exercise?" class="huge ui blue button">Continue Last Workout</a>
+              <a id="continue-btn" href="/exercise?" class="full-width huge ui blue button">Continue Last Workout</a>
             </div>
           </div>
         </div>
 
-        <!-- STATS -->
-        <div class="">
-          <h3>Your Workouts</h3>
-          <div>
-            <div class="workout-stats"></div>
-            <div class="buttons">
-              <a id="" href="/stats" class="huge ui blue button">View Your Workout Stats</a>
-            </div>
-          </div>
+        <!-- NEW -->
+        <div class="buttons">
+          <a href="/exercise" class="full-width huge positive ui button">New Workout</a>
         </div>
 
       </div>
@@ -65,5 +55,4 @@
   <script src="/index.js"></script>
 
 </body>
-
 </html>
