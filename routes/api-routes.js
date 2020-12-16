@@ -3,41 +3,39 @@ const WorkoutModel = require("../models/Workouts.js");
 
 // CREATE NEW WORKOUT
 router.post("/api/workouts", ({ body }, res) => {
-  // // const workout = new WorkoutModel({ body })
-  // // workout.save()
-  //   WorkoutModel.create({body})
-  //   .then(data => {
-  //     res.json(data);
-  //   })
-  //   .catch(err => {
-  //     res.status(400).json(err);
-  //   });
+    WorkoutModel.create({body})
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
 });
 
-// UPDATE - CONTINUE WORKOUT
+// UPDATE ADD - CONTINUE WORKOUT
 router.put("/api/workouts/:id", (req, res) => {
-  // console.log(req.params);
-  // const workoutId = req.params.id;
-  // WorkoutModel.findOneAndUpdate({
-  //   _id: workoutId,   // search query
-  // },
-  //   {
-  //     exercises: req.body   // field: values to update
-  //   },
-  //   {
-  //     new: true,   // return updated doc
-  //     runValidators: true,   // validate before update
-  //   }
-  // )
-  //   .then(data => {
-  //     res.json(data);
-  //   })
-  //   .catch(err => {
-  //     res.status(400).json(err);
-  //   });
+  console.log(req.params);
+  const workoutId = req.params.id;
+  WorkoutModel.findOneAndUpdate({
+    _id: workoutId,   // search query
+  },
+    {
+      $push: {exercises: req.body}   // field: values to update
+    },
+    {
+      new: true,   // return updated doc
+      runValidators: true,   // validate before update
+    }
+  )
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
 });
 
-// FIND WORKOUT
+// GET WORKOUTS
 router.get("/api/workouts", (req, res) => {
   console.log(req.params);
   WorkoutModel.find({})
@@ -49,22 +47,6 @@ router.get("/api/workouts", (req, res) => {
       res.status(400).json(err);
     });
 });
-
-// FIND WORKOUT
-// router.get("/api/workouts/:id", (req, res) => {
-// console.log(req.params);
-// const workoutId = req.params.id;
-// WorkoutModel.find({
-//   _id: workoutId,
-// })
-//   //   .sort({ date: -1 })
-//   .then(data => {
-//     res.json(data);
-//   })
-//   .catch(err => {
-//     res.status(400).json(err);
-//   });
-// });
 
 // STATS PAGE
 router.get("/api/workouts/range", (req, res) => {

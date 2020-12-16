@@ -7,9 +7,10 @@ const API = {
       console.log(err)
     }
     const json = await res.json();
-
     return json[json.length - 1];
   },
+
+  // CONTINUE/UPDATE daily workout
   async addExercise(data) {
     const id = location.search.split("=")[1];
 
@@ -20,9 +21,10 @@ const API = {
     });
 
     const json = await res.json();
-
     return json;
   },
+
+  // NEW (blank) daily workout
   async createWorkout(data = {}) {
     const res = await fetch("/api/workouts", {
       method: "POST",
@@ -31,14 +33,12 @@ const API = {
     });
 
     const json = await res.json();
-
     return json;
   },
 
   async getWorkoutsInRange() {
     const res = await fetch(`/api/workouts/range`);
     const json = await res.json();
-
     return json;
   },
 };
