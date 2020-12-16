@@ -38,22 +38,20 @@ router.put("/api/workouts/:id", (req, res) => {
 });
 
 // FIND WORKOUT
-router.get("/api/workouts/:id", (req, res) => {
-  // console.log(req.params);
-  // const workoutId = req.params.id;
-  // WorkoutModel.find({
-  //   _id: workoutId,
-  // })
-  //   //   .sort({ date: -1 })
-  //   .then(data => {
-  //     res.json(data);
-  //   })
-  //   .catch(err => {
-  //     res.status(400).json(err);
-  //   });
+router.get("/api/workouts", (req, res) => {
+  console.log(req.params);
+  WorkoutModel.find({})
+    //   .sort({ date: -1 })
+    .then(data => {
+      res.json(data);
+    })
+    .catch(err => {
+      res.status(400).json(err);
+    });
 });
 
-router.get("/api/workouts/:id/range", (req, res) => {
+// FIND WORKOUT
+// router.get("/api/workouts/:id", (req, res) => {
   // console.log(req.params);
   // const workoutId = req.params.id;
   // WorkoutModel.find({
@@ -66,7 +64,22 @@ router.get("/api/workouts/:id/range", (req, res) => {
   //   .catch(err => {
   //     res.status(400).json(err);
   //   });
-});
+// });
+
+// router.get("/api/workouts/:id/range", (req, res) => {
+  // console.log(req.params);
+  // const workoutId = req.params.id;
+  // WorkoutModel.find({
+  //   _id: workoutId,
+  // })
+  //   //   .sort({ date: -1 })
+  //   .then(data => {
+  //     res.json(data);
+  //   })
+  //   .catch(err => {
+  //     res.status(400).json(err);
+  //   });
+// });
 
 // DELETE WORKOUT
 router.delete("/api/workouts/:id", ({ body, params }, res) => {
