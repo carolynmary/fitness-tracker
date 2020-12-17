@@ -17,7 +17,7 @@
 ## How to Use 
 
 <!-- ![demo](pathToFileHere) -->
-Run command `node index`.
+Log multiple exercises in a workout on a given day. You can track the name, type, weight, sets, reps and duration of each exercise. And if it's cardio, you can track your distance.
 
 ## License
     
