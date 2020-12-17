@@ -22,7 +22,7 @@ let workoutSchema = new mongoose.Schema({
             weight: Number,
             reps: Number,
             sets: Number,
-            distance: Number   // (if cardio?)
+            distance: Number
         }
     ]
 })

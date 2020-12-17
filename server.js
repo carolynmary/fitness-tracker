@@ -6,9 +6,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // VARIABLES
-const PORT = process.env.PORT || 3000; // PORT or SERVER?
+const PORT = process.env.PORT || 3000;
 const database = "workouts_db";
-// const collections = ["Workouts"];
 
 // DATABASE CONNECTION
 const mongoose = require("mongoose");
