@@ -12,10 +12,15 @@ const database = "workouts_db";
 
 // DATABASE CONNECTION
 const mongoose = require("mongoose");
-mongoose.connect( process.env.MONGODB_URI || `mongodb://localhost/${database}`, { 
-  useNewUrlParser: true, 
-  useFindAndModify: false
-});
+mongoose.connect(
+  process.env.MONGODB_URI || `mongodb://localhost/${database}`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false
+  }
+);
 
 // LOGGER
 const logger = require("morgan");
