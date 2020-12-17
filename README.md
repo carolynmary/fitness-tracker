@@ -3,7 +3,7 @@
 ![License](https://img.shields.io/badge/License-ISC-green) </br>
 
 # Fitness Tracker   
-[liveSite](url)
+[fitness-tracker-cm.herokuapp.com](https://fitness-tracker-cm.herokuapp.com)
  
 - - -
 - - -
@@ -16,8 +16,8 @@
   
 ## How to Use 
 
-<!-- ![demo](pathToFileHere) -->
-Log multiple exercises in a workout on a given day. You can track the name, type, weight, sets, reps and duration of each exercise. And if it's cardio, you can track your distance.
+Log multiple exercises in a workout on a given day. You can track the name, type, weight, sets, reps and duration of each exercise. And if it's cardio, you can track your distance. </br>
+![demo](./assets/fitness-tracker.gif)
 
 ## License
     
